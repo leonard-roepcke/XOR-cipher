@@ -7,5 +7,8 @@ public class Controller{
         System.out.println("Controller initialized");
         ui = new Ui(this);
         logic = new Logic();
+
+        System.out.println(ui.getMessage());
+        
     };
 }
