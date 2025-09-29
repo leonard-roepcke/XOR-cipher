@@ -1,4 +1,7 @@
 public class Logic{
+
+    private String encriptedMessage = "";
+
     public Logic() {
         System.out.println("Logic initialized");
     }
@@ -11,4 +14,14 @@ public class Logic{
         }
         return binary.toString();
     }
+
+    public String encriptMessage(String binaryMessage, String key){
+        
+        for(int i = 0; i < binaryMessage.length(); i++){
+            encriptedMessage = encriptedMessage + ((char)binaryMessage.charAt(i) ^ key.charAt(i % key.length()));
+        }
+        return encriptedMessage;
+    }
+
+    
 }
